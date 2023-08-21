@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style-custom.css">
+  <title>Formulário</title>
+</head>
+<body>
+  
+    <div class="container form-container">
+      <h2 class="text-center">Formulário</h2>
+        <form>
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-00" required >
+            <small class="form-text text-muted">Formato: 123.456.789-00</small>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Habilitação</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="habilitacao" id="sim" value="sim" required>
+              <label class="form-check-label" for="sim">Sim</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="habilitacao" id="nao" value="nao">
+              <label class="form-check-label" for="nao">Não</label>
+            </div>
+          </div>
+          <div class="mb-3" id="categoriasHabilitacao" style="display: none;">
+            <label class="form-label">Categorias de Habilitação</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Selecionar categoria</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+            </select>
+          </div>
+           
+          <div class="mb-3">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="cep" name="cep" placeholder="Digite o CEP" required>
+            <small class="form-text text-muted">Digite o CEP para preenchimento automático.</small>
+          </div>
+          <div class="mb-3">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade" name="cidade" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="estado" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="estado" name="estado" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="endereco" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="endereco" name="endereco" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="complemento" class="form-label">Complemento</label>
+            <input type="text" class="form-control" id="complemento" name="complemento">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    
+    <script src="assets/js/cep.js"></script>
+    <script src="assets/js/categoria.js"></script>
+  </body>
+  </html>
